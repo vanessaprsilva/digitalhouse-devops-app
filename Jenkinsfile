@@ -83,7 +83,7 @@ pipeline {
         stage('Deploy to Homolog') {
             agent {  
                 node {
-                    label 'aws-user-hml'
+                    label 'hml'
                 }
             }
 
@@ -118,7 +118,7 @@ pipeline {
         stage('Deploy to Producao') {
             agent {  
                 node {
-                    label 'aws-user-prod'
+                    label 'prod'
                 }
             }
 
