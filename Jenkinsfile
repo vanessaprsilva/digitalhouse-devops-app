@@ -71,7 +71,7 @@ pipeline {
                     steps {
                         echo 'Push latest para AWS ECR'
                         script {
-                            docker.withRegistry('https://258132724776.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:user-erc') {
+                            docker.withRegistry('https://258132724776.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:user-ecr') {
                                 docker.image('projeto-neon').push()
                             }
                         }
@@ -91,7 +91,7 @@ pipeline {
                 script {
                     if(env.GIT_BRANCH=='origin/master'){
  
-                        docker.withRegistry('https://258132724776.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:user-erc') {
+                        docker.withRegistry('https://258132724776.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:user-ecr') {
                             docker.image('projeto-neon').pull()
                         }
 
