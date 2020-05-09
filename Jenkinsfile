@@ -95,7 +95,7 @@ pipeline {
                             docker.image('projeto-neon').pull()
                         }
 
-                        echo 'Deploy para Desenvolvimento'
+                        echo 'Deploy para Homolog'
                         sh "hostname"
                         sh "docker stop app1"
                         sh "docker rm app1"
