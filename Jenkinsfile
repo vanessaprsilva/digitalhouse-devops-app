@@ -97,8 +97,8 @@ pipeline {
 
                         echo 'Deploy para Homolog'
                         sh "hostname"
-                        sh "docker stop app1"
-                        sh "docker rm app1"
+                        //sh "docker stop app1"
+                        //sh "docker rm app1"
                         //sh "docker run -d --name app1 -p 8030:3000 933273154934.dkr.ecr.us-east-1.amazonaws.com/digitalhouse-devops:latest"
                         withCredentials([[$class:'AmazonWebServicesCredentialsBinding' 
                             , credentialsId: 'aws-user-hml']]) {
@@ -145,8 +145,8 @@ pipeline {
 
                         echo 'Deploy para Producao'
                         sh "hostname"
-                        sh "docker stop app1"
-                        sh "docker rm app1"
+                        //sh "docker stop app1"
+                        //sh "docker rm app1"
                         //sh "docker run -d --name app1 -p 8030:3000 933273154934.dkr.ecr.us-east-1.amazonaws.com/digitalhouse-devops:latest"
                         withCredentials([[$class:'AmazonWebServicesCredentialsBinding' 
                             , credentialsId: 'aws-user-prod']]) {
